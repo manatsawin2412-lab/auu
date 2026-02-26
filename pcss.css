@@ -1,0 +1,127 @@
+/* --- 1. ตกแต่งพื้นฐานหน้าเว็บ --- */
+body { 
+    font-family: 'Sarabun', sans-serif; 
+    line-height: 1.6; 
+    margin: 0; 
+    background-color: #5020fa; 
+}
+
+.main-header { 
+     background: linear-gradient(rgba(201, 176, 231, 0.8), rgba(74, 20, 140, 0.8)), 
+              url('../picture/khon7.jpg') center/cover;
+    background-color: #0f068d; 
+    color: white; 
+    padding: 2rem; 
+    text-align: center; 
+}
+
+.main-nav a { 
+    color: white; 
+    margin: 0 15px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: 0.3s; /* ใส่ transition ตรงนี้เพื่อให้สีเปลี่ยนแบบนุ่มนวล */
+}
+
+/* แก้ไขเป็นเจาะจงที่ตัวลิงก์ (a) เมื่อเมาส์ชี้ */
+.main-nav a:hover {
+    color: #d5fa06; /* เปลี่ยนเป็นสีเหลือง หรือสีที่คุณต้องการ */
+    cursor: pointer;
+}
+
+/* --- 2. ส่วนแกลเลอรีและแถวรูปภาพ --- */
+.gallery-container {
+    background-color: #0d2d5e; 
+    padding: 50px 0;
+    overflow: hidden; 
+    width: 100%;
+}
+
+.marquee-title {
+    color: white;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.marquee-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.marquee-content {
+    display: flex;       
+    flex-direction: row; 
+    flex-shrink: 0;      
+    gap: 20px;           
+}
+
+.art-item {
+    flex-shrink: 0;      
+}
+
+.art-item img {
+    width: 200px; 
+    height: 280px; 
+    border-radius: 15px;
+    object-fit: cover;   
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: block;
+}
+
+/* --- 3. แอนิเมชันเลื่อนอัตโนมัติ (Animation) --- */
+.scroll-left {
+    animation: scrollLeftLoop 30s linear infinite;
+}
+
+@keyframes scrollLeftLoop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.scroll-right {
+    animation: scrollRightLoop 30s linear infinite;
+}
+
+@keyframes scrollRightLoop {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+.marquee-wrapper:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+
+/* --- 4 ส่วนที่ทำให้รูปขยายเมื่อเมาส์ชี้ --- */
+
+.art-item img {
+    /* เพิ่มคำสั่งนี้เข้าไปในบรรทัดเดิมที่มีอยู่ เพื่อให้เวลาขยายมันดูนุ่มนวล */
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.art-item img:hover {
+    /* ขยายใหญ่ขึ้น 10% */
+    transform: scale(1.1); 
+    
+    /* เพิ่มเงาให้รูปดูเด่นออกมา */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
+    
+    /* เปลี่ยนสีขอบเมื่อชี้ (Optional) */
+    border-color: #43b9a6; 
+    
+    /* ทำให้รูปอยู่บนสุดเวลาขยาย (ป้องกันรูปอื่นบัง) */
+    z-index: 10;
+}
+
+
+.main-footer { 
+    text-align: center; 
+    padding: 20px; 
+    background: #0f068d; 
+    color: white; 
+}

@@ -1,0 +1,515 @@
+/* ============================================================
+   1. ตั้งค่าพื้นฐานและตัวแปร (Global Styles & Variables)
+   ============================================================ */
+:root {
+  --primary-purple: #4a148c;   /* สีม่วงหลัก */
+  --secondary-blue: #0f068d;   /* สีน้ำเงินเข้มสำหรับ Footer */
+  --accent-gold: #ffd700;      /* สีทองสำหรับเน้น */
+  --deep-red: #b22222;         /* สีแดงเข้มสำหรับหัวข้อ */
+  --highlight-blue: #2b1ed6;   /* สีน้ำเงินสว่าง */
+  --light-gray: #f5f5f5;
+}
+
+body {
+  font-family: 'Sarabun', 'Tahoma', sans-serif;
+  margin: 0;
+  background-color: #bbb2e6;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   2. ส่วนหัวและเมนู (Header & Navigation)
+   ============================================================ */
+.contact-header {
+  /* พื้นหลังสีม่วงไล่เฉดซ้อนทับรูปภาพ */
+  background: linear-gradient(rgba(231, 241, 182, 0.8), rgba(123, 99, 230, 0.8)), 
+              url('../picture/ar23.jpg') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.contact-h {
+  /* พื้นหลังสีม่วงไล่เฉดซ้อนทับรูปภาพ */
+  background: linear-gradient(rgba(231, 241, 182, 0.8), rgba(123, 99, 230, 0.8)), 
+              url('../picture/ar3.jpg') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.contact-h2 {
+  /* พื้นหลังสีม่วงไล่เฉดซ้อนทับรูปภาพ */
+  background: linear-gradient(rgba(231, 241, 182, 0.8), rgba(123, 99, 230, 0.8)), 
+              url('../picture/ar41.jpg') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.contact-h3 {
+  /* พื้นหลังสีม่วงไล่เฉดซ้อนทับรูปภาพ */
+  background: linear-gradient(rgba(231, 241, 182, 0.8), rgba(123, 99, 230, 0.8)), 
+              url('../picture/ar41.jpg') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.contact-h4 {
+  /* พื้นหลังสีม่วงไล่เฉดซ้อนทับรูปภาพ */
+  background: linear-gradient(rgba(231, 241, 182, 0.8), rgba(123, 99, 230, 0.8)), 
+              url('../picture/khon4.jpg') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.contact-h5 {
+  /* พื้นหลังสีม่วงไล่เฉดซ้อนทับรูปภาพ */
+  background: linear-gradient(rgba(231, 241, 182, 0.8), rgba(123, 99, 230, 0.8)), 
+              url('../picture/tarung4.jpg') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+
+.contact-h6 {
+  /* พื้นหลังสีม่วงไล่เฉดซ้อนทับรูปภาพ */
+  background: linear-gradient(rgba(231, 241, 182, 0.8), rgba(123, 99, 230, 0.8)), 
+              url('../picture/eyekhon1.jpg') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.contact-h7 {
+  /* พื้นหลังสีม่วงไล่เฉดซ้อนทับรูปภาพ */
+  background: linear-gradient(rgba(231, 241, 182, 0.8), rgba(123, 99, 230, 0.8)), 
+              url('../picture/boat2.jpg') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.contact-h8 {
+  /* พื้นหลังสีม่วงไล่เฉดซ้อนทับรูปภาพ */
+  background: linear-gradient(rgba(231, 241, 182, 0.8), rgba(123, 99, 230, 0.8)), 
+              url('../picture/Yan4.jpg') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+
+
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.main-nav {
+  background: #744888; /* สีเขียวมิ้นต์ตามดีไซน์เดิมของคุณ */
+  padding: 1rem;
+  text-align: center;
+}
+
+.main-nav a { 
+    color: white; 
+    margin: 0 15px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: 0.3s; /* ให้สีเปลี่ยนแบบนุ่มนวลเมื่อ Hover */
+}
+
+.main-nav a:hover {
+    color: #d5fa06; /* เปลี่ยนเป็นสีเหลืองมะนาว */
+    cursor: pointer;
+}
+
+/* ============================================================
+   3. แกลเลอรีรูปภาพเลื่อนอัตโนมัติ (Marquee Gallery)
+   ============================================================ */
+.gallery-container {
+    padding: 30px 0;
+    background-color: #0d2d5e;
+    overflow: hidden; 
+    width: 100%;
+}
+
+.marquee-title {
+    color: white;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.marquee-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.marquee-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ตั้งค่ารูปภาพในแถวเลื่อน */
+.art-item img {
+    height: 250px; 
+    width: 180px; 
+    object-fit: cover; /* ป้องกันรูปเบี้ยว */
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* เอฟเฟกต์เมื่อ Hover ที่รูปภาพ */
+.art-item img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
+    border-color: #43b9a6; 
+    z-index: 10;
+}
+
+/* หยุดแอนิเมชันเมื่อเอาเมาส์วาง */
+.marquee-wrapper:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* --- แอนิเมชันการเลื่อน --- */
+.scroll-left {
+    animation: scrollLeftLoop 30s linear infinite;
+}
+
+@keyframes scrollLeftLoop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.scroll-right {
+    animation: scrollRightLoop 30s linear infinite;
+}
+
+@keyframes scrollRightLoop {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+/* ============================================================
+   4. ส่วนเนื้อหาและการ์ด (Art Card & Content)
+   ============================================================ */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.art-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.art-card h3 {
+    color: var(--deep-red);
+    border-bottom: 2px solid var(--accent-gold);
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.feature-list li::before {
+    content: "✦";
+    color: var(--accent-gold);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* กล่องไฮไลท์เน้นข้อความ */
+.highlight-box {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px); /* เอฟเฟกต์กระจกฝ้า */
+    border-left: 5px solid var(--accent-gold);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.highlight-title {
+    color: var(--highlight-blue);
+    margin-top: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.highlight-content p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+.highlight-content strong {
+    color: var(--deep-red);
+}
+
+/* ============================================================
+   5. ส่วนท้ายเว็บไซต์ (Footer)
+   ============================================================ */
+.main-footer { 
+    text-align: center; 
+    padding: 30px; 
+    background: var(--secondary-blue); 
+    color: white; 
+    margin-top: 40px;
+}
+
+/* --- การจัดวางแบบ Flex (รูปสลับฝั่ง) --- */
+.flex-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+/* สำหรับ Desktop: ให้สลับด้านในใบที่ 2 */
+.alt-row {
+    flex-direction: row-reverse;
+}
+
+.card-content {
+    flex: 1.2; /* ให้เนื้อหากว้างกว่ารูปเล็กน้อย */
+}
+
+.card-image {
+    flex: 0.8;
+}
+
+/* --- สไตล์รูปภาพแบบมีเงาและขอบมน --- */
+.styled-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+    border: 5px solid white;
+    transition: transform 0.4s ease;
+}
+
+.styled-img:hover {
+    transform: scale(1.03) rotate(1deg); /* ให้รูปขยับเล็กน้อยเวลาชี้ */
+}
+
+/* --- ปรับแต่งสำหรับมือถือ --- */
+@media (max-width: 768px) {
+    .flex-card, .alt-row {
+        flex-direction: column; /* มือถือให้วางเรียงลงมาปกติ */
+    }
+    .styled-img {
+        height: 200px;
+    }
+}
+
+
+/* --- การจัดรูปภาพ 2 รูปให้เรียงกันสวยงาม --- */
+.card-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2 คอลัมน์ */
+    gap: 10px;
+    flex: 1;
+}
+
+/* เอฟเฟกต์รูปภาพซ้อนกันนิดๆ ให้ดูมีสไตล์ */
+.img-overlap {
+    margin-top: 30px; /* ให้รูปที่สองตกลงมานิดนึง */
+    border: 3px solid var(--accent-gold) !important;
+}
+
+/* --- ฟังชั่นรูปภาพขนาดเล็ก (Mini) --- */
+.img-mini {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 15px;
+    border: 2px solid var(--accent-gold);
+}
+
+/* ปรับการแสดงผลของ flex-card เมื่อมีรูปคู่ */
+@media (max-width: 768px) {
+    .card-image-grid {
+        grid-template-columns: 1fr; /* มือถือให้รูปเรียงต่อกันในแนวตั้ง */
+    }
+    .img-overlap {
+        margin-top: 0;
+    }
+}
+
+
+/* จัดระเบียบการ์ดแบบเน้นเนื้อหา */
+.content-rich-card {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr; /* เนื้อหา 75% : รูปภาพ 25% */
+    gap: 25px;
+    align-items: start;
+}
+
+.card-info {
+    text-align: left;
+}
+
+/* แกลเลอรีแนวตั้งฝั่งขวา */
+.card-side-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* สไตล์รูปเล็ก (Thumbnail) */
+.side-img-thumb {
+    width: 100%;
+    height: 110px; /* คุมความสูงให้เท่ากัน */
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.side-img-thumb:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-gold);
+}
+
+/* ปรับปรุง Highlight Box ให้ดูพรีเมียมขึ้น */
+.highlight-box {
+    margin: 15px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-left: 4px solid var(--accent-gold);
+}
+
+/* สำหรับมือถือ: ให้รูปกลับมาเรียงต่อกันด้านล่าง */
+@media (max-width: 768px) {
+    .content-rich-card {
+        grid-template-columns: 1fr;
+    }
+    .card-side-gallery {
+        flex-direction: row; /* มือถือให้รูปเรียงแนวนอน */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .side-img-thumb {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+
+
+
+/* --- โครงสร้างเน้นเนื้อหาและรูปภาพขนาดเล็ก --- 
+.content-rich-card {
+    display: grid;
+    grid-template-columns: 1.6fr 0.4fr; /* เนื้อหา 80% : รูปภาพ 20% */
+  /*  gap: 25px;
+    align-items: start;
+}
+*/
+
+/* สลับด้านรูปภาพ 
+.alt-row {
+    grid-template-columns: 0.4fr 1.6fr;
+}
+*/
+/* แกลเลอรีแนวตั้งฝั่งข้าง 
+.card-side-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}*/
+
+/* ปรับแต่งรูปภาพให้เล็กลงแต่ดูแพง */
+/*.side-img-thumb {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.side-img-thumb:hover {
+    transform: scale(1.05);
+    border-color: #ffd700;
+}
+*/
+/* สำหรับหน้าจอมือถือ
+@media (max-width: 768px) {
+    .content-rich-card, .alt-row {
+        grid-template-columns: 1fr;
+    }
+    .card-side-gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .side-img-thumb {
+        width: 100px;
+        height: 100px;
+    }
+} */

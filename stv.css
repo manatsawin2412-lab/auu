@@ -1,0 +1,211 @@
+:root {
+  --primary-purple: #4a148c; /* สีม่วงหลัก */
+  --light-gray: #f5f5f5;
+}
+
+body {
+  font-family: 'Tahoma', sans-serif;
+  margin: 0;
+  background-color: #fff;
+}
+/* Header ที่มีพื้นหลังสีม่วงไล่เฉด */
+.contact-header {
+  background: linear-gradient(rgba(201, 176, 231, 0.8), rgba(74, 20, 140, 0.8)), 
+              url('../picture/p2.1.jpg') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.contact-arc {
+  background: linear-gradient(rgba(201, 176, 231, 0.8), rgba(74, 20, 140, 0.8)), 
+              url('../picture/cut.jpg') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+.contact-header h1 {
+  font-size: 2.5rem;
+}
+
+.main-nav a { 
+    color: white; 
+    margin: 0 15px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: 0.3s; /* ใส่ transition ตรงนี้เพื่อให้สีเปลี่ยนแบบนุ่มนวล */
+}
+
+/* แก้ไขเป็นเจาะจงที่ตัวลิงก์ (a) เมื่อเมาส์ชี้ */
+.main-nav a:hover {
+    color: #d5fa06; /* เปลี่ยนเป็นสีเหลือง หรือสีที่คุณต้องการ */
+    cursor: pointer;
+}
+
+
+/* --- 2. ส่วนแกลเลอรีและแถวรูปภาพ --- */
+.gallery-container {
+   padding: 30px 0;    /* เพิ่มพื้นที่ว่างบน-ล่างให้แถวดูไม่อึดอัด */
+    background-color: #0d2d5e;
+    overflow: hidden; 
+    width: 100%;
+   
+}
+
+
+.art-item img {
+
+    /* เพิ่มคำสั่งนี้เข้าไปในบรรทัดเดิมที่มีอยู่ เพื่อให้เวลาขยายมันดูนุ่มนวล */
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease;
+    cursor: pointer;
+
+    /* 1. ล็อกความสูงให้เท่ากันทั้งแถว (ปรับตัวเลขตามความต้องการ) */
+    height: 250px; 
+
+      
+    /* 2. กำหนดความกว้างให้พอดี (เช่น 180px หรือจะใช้ auto ก็ได้) */
+    width: 180px; 
+
+    /* 3. สำคัญมาก: ป้องกันรูปเบี้ยว/ยืด โดยให้ครอปส่วนที่เกินออกอัตโนมัติ */
+    object-fit: cover; 
+    
+    /* 4. ตกแต่งเพิ่มเติม */
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.art-item img:hover {
+    /* ขยายใหญ่ขึ้น 10% */
+    transform: scale(1.1); 
+    
+    /* เพิ่มเงาให้รูปดูเด่นออกมา */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
+    
+    /* เปลี่ยนสีขอบเมื่อชี้ (Optional) */
+    border-color: #43b9a6; 
+    
+    /* ทำให้รูปอยู่บนสุดเวลาขยาย (ป้องกันรูปอื่นบัง) */
+    z-index: 10;
+}
+
+
+
+.marquee-title {
+    color: white;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.marquee-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.marquee-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* จัดให้รูปอยู่กึ่งกลางแนวตั้งเสมอ */
+    gap: 15px;           /* ระยะห่างระหว่างรูป */
+}
+
+
+/* --- 3. แอนิเมชันเลื่อนอัตโนมัติ (Animation) --- */
+.scroll-left {
+    animation: scrollLeftLoop 30s linear infinite;
+}
+
+@keyframes scrollLeftLoop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.scroll-right {
+    animation: scrollRightLoop 30s linear infinite;
+}
+
+@keyframes scrollRightLoop {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+.marquee-wrapper:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+
+.main-footer { 
+    text-align: center; 
+    padding: 20px; 
+    background: #0f068d; 
+    color: white; 
+}
+
+.art-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* เพิ่มเงาให้ดูมีมิติ */
+        padding: 40px;
+        line-height: 1.8;
+    }
+
+    .art-card h3 {
+        color: #b22222; /* สีแดงเข้ม */
+        border-bottom: 2px solid #ffd700; /* ขีดเส้นใต้สีทอง */
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .feature-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .feature-list li {
+        margin-bottom: 15px;
+        padding-left: 25px;
+        position: relative;
+    }
+
+    .feature-list li::before {
+        content: "✦"; /* ใช้สัญลักษณ์แทน Bullet ปกติ */
+        color: #ffd700;
+        position: absolute;
+        left: 0;
+    }
+
+    .highlight-box {
+    background: rgba(255, 255, 255, 0.7); /* พื้นโปร่งแสง */
+    backdrop-filter: blur(10px); /* เอฟเฟกต์กระจกเบลอ */
+    border-left: 5px solid #ffd700; /* เส้นสีทองด้านซ้าย */
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.highlight-title {
+    color: #2b1ed6; /* สีน้ำเงินเดียวกับ Header ของคุณ */
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.highlight-content p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+.highlight-content strong {
+    color: #b22222; /* สีแดงเข้มเน้นหัวข้อ */
+}
